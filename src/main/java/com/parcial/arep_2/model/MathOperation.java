@@ -76,12 +76,12 @@ public class MathOperation {
 
     private int makeBinarySearch(List<Integer> numbers){
         numbers.sort(null);
-        int result = binarySearch(numbers, 0, numbers.size());
+        int result = binarySearch(numbers, 0, numbers.size()-1);
         return result;
     }
 
     private int binarySearch(List<Integer> numbers, int l, int r){
-        if(l>r) return -1;
+        if(l>r ) return -1;
         int mid = (l+r) / 2;
         if (numbers.get(mid) == value) return mid;
         // Si el numero de la mitad es mayor tomar la mitad izquierda
